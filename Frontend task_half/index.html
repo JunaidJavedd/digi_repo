@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vertical Infinite Scroll</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <svg style="display: none;">
+    <symbol id="check-mark" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.285 6.709l-11.1 11.1-5.485-5.486 1.414-1.414 4.071 4.071 9.686-9.686z" fill="currentColor"/>
+    </symbol>
+  </svg>
+  
+</head>
+<body>
+      <!-- Navbar -->
+
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="assets/images/ds-logo.svg" alt="Digital Silk Logo">
+          </a>
+          <span>
+          <a href="#" class="c-btn d-md-block d-none nav-style-btn">Request a Quote</a>
+        </span>
+          <button class="navbar-toggler" type="button" id="customToggle">
+            <span id="menu-icon" class="toggle-icon">&#9776; <span class="change_size">MENU</span></span>  <!-- ☰ -->
+            <span id="close-icon" class="toggle-icon" style="display: none;">&times;</span>
+             <!-- ✕ -->
+          </button>
+          <div class="navbar-nav-overlay" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Work</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="hero-wrapper position-relative">
+
+        <div class="text-overlay container position-absolute top-50 start-0 translate-middle-y">
+          <div class="row">
+            <div class="col-md-7">
+              <h3 class="text-white change_size text_trans">Premium Web Design Agency</h3>
+              
+              <h1 class="text-white fw-bold display-4 font_size text_trans22">We Grow Brands Online</h1>
+              <h4 class="text-white change_size py-md-4">
+                Custom Websites, Branding & Digital Marketing
+              </h4>
+              <a class="c-btn22 -slideover" href="#">
+                Request a Quote
+            </a>
+            
+            </div>
+          </div>
+        </div>
+      
+        <!-- IMAGE SECTION -->
+        <div class="outer-wrapper">
+          <div class="row justify-content-end">
+            <div class="col-md-3 col-4">
+              <div class="hero_infinite_move">
+                <div class="image-track">
+                  <img src="assets/images/1.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/2.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/3.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/4.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/5.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/1.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/2.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/3.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/4.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/5.jpg.webp" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-4">
+              <div class="moving-image-container">
+                <div class="vertical-image-track">
+                  <div class="track-group">
+                    <img src="assets/images/8.jpg.webp" class="img-fluid" alt="">
+                    <img src="assets/images/9.jpg.webp" class="img-fluid" alt="">
+                    <img src="assets/images/10.jpg.webp" class="img-fluid" alt="">
+                    <img src="assets/images/11.jpg.webp" class="img-fluid" alt="">
+                  </div>
+                  <div class="track-group">
+                    <img src="assets/images/12.jpg.webp" class="img-fluid" alt="">
+                    <img src="assets/images/8.jpg.webp" class="img-fluid" alt="">
+                    <img src="assets/images/9.jpg.webp" class="img-fluid" alt="">
+                    <img src="assets/images/10.jpg.webp" class="img-fluid" alt="">
+                    <img src="assets/images/11.jpg.webp" class="img-fluid" alt="">
+                    <img src="assets/images/12.jpg.webp" class="img-fluid" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-4">
+              <div class="hero_infinite_move">
+                <div class="image-track">
+                  <img src="assets/images/6.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/7.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/13.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/14.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/15.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/6.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/7.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/13.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/14.jpg.webp" class="img-fluid" alt="">
+                  <img src="assets/images/15.jpg.webp" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    
+      <div class="us-section slide-option">
+     
+        <div id="infinite" class="highway-slider">
+          <div class="container-fluid highway-barrier">
+            <ul class="highway-lane">
+              <li class="highway-car"><img src="assets/Slider_images/BRU_Logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/enchant_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/g2_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/grenco_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/mcds_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/MicrosoftTeams-image-2.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/nfl_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/nyc_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/PG_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/Sony-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/xerox_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/BRU_Logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/enchant_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/g2_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/grenco_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/mcds_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/MicrosoftTeams-image-2.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/nfl_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/nyc_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/PG_logo-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/Sony-1.png.webp" alt="" srcset=""></li>
+              <li class="highway-car"><img src="assets/Slider_images/xerox_logo-1.png.webp" alt="" srcset=""></li>
+              
+         
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="txth1">
+              Creative Web Agency Delivering Custom Solutions
+            </h1>
+            <div class="sol-list-item">
+              <span class="c-btn__ico me-3">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span class="txtspan">Custom Web Design Solutions 
+                <b>To Drive Conversions</b></span>
+            </div>
+            <div class="sol-list-item">
+              <span class="c-btn__ico me-3">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span class="txtspan">Effective Marketing Campaigns 
+                <b>To Generate Growth</b></span>
+            </div>
+            <div class="sol-list-item">
+              <span class="c-btn__ico me-3">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span class="txtspan">Tailored Branding Strategies 
+                <b> To Drive Engagement</b></span>
+            </div>
+            
+            <p class="py-3" style="letter-spacing: 1px;">
+              Digital Silk is a web design company & digital marketing agency focused on growing brands online. We create effective brand strategies, custom web design, development, and digital marketing solutions to generate greater brand engagement and conversions. We work closely with our clients to ensure each project meets their brand guidelines and business goals and provide technical and marketing expertise to ensure optimal results.
+            </p>
+
+          </div>
+          <div class="col-md-6">
+            <img src="assets/images/web-designs-with-trophy.png.webp" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row align-items-center digital-silk-video">
+          <div class="col-md-3 p-0 position-relative">
+            <div class="video-thumbnail" onclick="openVideo()">
+              <video src="assets/video/video.mp4" class="thumb-video" autoplay muted loop></video>
+              <button class="custom-play-btn" >
+                <span class="play-default">
+                  <img src="assets/images/play.png" alt="Play">
+                </span>
+                <span class="play-hover">
+                  <img src="assets/images/play-a.png" alt="Play Hover">
+                </span>
+              </button>
+            </div>
+          </div>
+          <div id="video-trigger" class="col-md-9 p-0">
+            <div class="video-text">
+              <div class="gradient-bar">
+                <h5>See Our Work In Action</h5>
+                <p>1 MINUTE</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      
+        <!-- Video Modal -->
+        <div id="videoModal" class="video-modal">
+          <span class="close-btn" onclick="closeVideo()">&times;</span>
+          <video id="fullscreenVideo" controls muted autoplay>
+            <source src="assets/video/video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-5 d-flex justify-content-between">
+            <div class="fivestar ">
+              <span>5 Star DesignRush Reviews</span>
+              <img src="assets/images/dr.png.webp" class="img-fluid" alt="" srcset="">
+
+            </div>
+            <div class="fivestar22">
+              <span>Latest Web Design Award</span>
+              <img src="assets/images/logo.png.webp" class="img-fluid" alt="" srcset="">
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <section style="background-color: #1e3075;">
+        <div class="bluesect">
+        <h4>
+          OUR WORK
+        </h4>
+        <h1>
+          Featured Website Design Projects
+        </h1>
+        <p>
+          Custom B2C, B2B and eCommerce solutions
+        </p>
+        <p>
+          optimized for traffic, engagement and conversion.
+        </p>
+      </div>
+      <section>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="filter-wrapper text-center">
+              <div class="filter-cards d-flex justify-content-center flex-wrap gap-3 mb-4">
+                <div class="filter-card active" onclick="switchTab(this, 'featured')">
+                  <i class="fas fa-star"></i>
+                  <span>FEATURED</span>
+                  <div class="arrow-indicator"><i class="fas fa-angle-down"></i></div>
+                </div>
+      
+                <div class="filter-card" onclick="switchTab(this, 'b2b')">
+                  <i class="fas fa-handshake"></i>
+                  <span>B2B</span>
+                  <div class="arrow-indicator"><i class="fas fa-angle-down"></i></div>
+                </div>
+      
+                <div class="filter-card" onclick="switchTab(this, 'b2c')">
+                  <i class="fas fa-file-alt"></i>
+                  <span>B2C</span>
+                  <div class="arrow-indicator"><i class="fas fa-angle-down"></i></div>
+                </div>
+      
+                <div class="filter-card" onclick="switchTab(this, 'ecommerce')">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span>ECOMMERCE</span>
+                  <div class="arrow-indicator"><i class="fas fa-angle-down"></i></div>
+                </div>
+              </div>
+      
+              <div id="project-content" class="projects fade-in row g-4">
+                <!-- Featured Content -->
+                <div class="col-md-6 project-item" data-category="featured">
+                  <img src="assets/images/project1-DNzLiryK.png" class="img-fluid" />
+                  <div class="overlay-circle">
+                    <span>Click to view project</span>
+                  </div>
+                </div>
+                <div class="col-md-6 project-item" data-category="featured">
+                  <img src="assets/images/project2-BcFfG8ZC.png" class="img-fluid" />
+                  <div class="overlay-circle">
+                    <span>Click to view project</span>
+                  </div>
+                </div>
+                <div class="col-md-6 project-item" data-category="featured">
+                  <img src="assets/images/project3-BHDxYLEi.png" class="img-fluid" />
+                  <div class="overlay-circle">
+                    <span>Click to view project</span>
+                  </div>
+                </div>
+                <div class="col-md-6 project-item" data-category="featured">
+                  <img src="assets/images/project4-qbJfVtEK.png" class="img-fluid" />
+                  <div class="overlay-circle">
+                    <span>Click to view project</span>
+                  </div>
+                </div>
+                <div class="col-md-6 project-item" data-category="featured">
+                  <img src="assets/images/project5-DvUDDbkH.png" class="img-fluid" />
+                  <div class="overlay-circle">
+                    <span>Click to view project</span>
+                  </div>
+                </div>
+                <div class="col-md-6 project-item" data-category="featured">
+                  <img src="assets/images/project6-AwHDvQBw.png" class="img-fluid" />
+                  <div class="overlay-circle">
+                    <span>Click to view project</span>
+                  </div>
+                </div>
+      
+                <!-- B2B Content -->
+                <div class="col-md-6 project-item d-none" data-category="b2b">
+                  <img src="assets/images/project1-DNzLiryK.png" class="img-fluid" />
+                  <div class="overlay-circle">
+                    <span>Click to view project</span>
+                  </div>
+                </div>
+                <div class="col-md-6 project-item d-none" data-category="b2b">
+                  <img src="assets/images/project2-BcFfG8ZC.png" class="img-fluid" />
+                  <div class="overlay-circle">
+                    <span>Click to view project</span>
+                  </div>
+                </div>
+      
+                <!-- B2C Content -->
+         <!-- B2C Content -->
+<div class="col-md-6 project-item d-none" data-category="b2c">
+  <img src="assets/images/project3-BHDxYLEi.png" class="img-fluid" />
+  <div class="overlay-circle"><span>Click to view project</span></div>
+</div>
+<div class="col-md-6 project-item d-none" data-category="b2c">
+  <img src="assets/images/project4-qbJfVtEK.png" class="img-fluid" />
+  <div class="overlay-circle"><span>Click to view project</span></div>
+</div>
+<div class="col-md-6 project-item d-none" data-category="b2c">
+  <img src="assets/images/project5-DvUDDbkH.png" class="img-fluid" />
+  <div class="overlay-circle"><span>Click to view project</span></div>
+</div>
+<div class="col-md-6 project-item d-none" data-category="b2c">
+  <img src="assets/images/project6-AwHDvQBw.png" class="img-fluid" />
+  <div class="overlay-circle"><span>Click to view project</span></div>
+</div>
+
+      
+                <!-- ECOMMERCE Content -->
+               
+                <!-- ECOMMERCE Content -->
+<div class="col-md-6 project-item d-none" data-category="ecommerce">
+  <img src="assets/images/project4-qbJfVtEK.png" class="img-fluid" />
+  <div class="overlay-circle"><span>Click to view project</span></div>
+</div>
+<div class="col-md-6 project-item d-none" data-category="ecommerce">
+  <img src="assets/images/project5-DvUDDbkH.png" class="img-fluid" />
+  <div class="overlay-circle"><span>Click to view project</span></div>
+</div>
+<div class="col-md-6 project-item d-none" data-category="ecommerce">
+  <img src="assets/images/project6-AwHDvQBw.png" class="img-fluid" />
+  <div class="overlay-circle"><span>Click to view project</span></div>
+</div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      </section>
+
+      
+      <section class="clientsback">
+        <div class="bluesect">
+          <h4>
+            Clients Across Industries
+          </h4>
+          <h1>
+            Full-Service Web Design Agency
+          </h1>
+          <p class="mb-0">
+            From startups to Fortune 500 companies,
+          </p>
+          <p style="font-weight: 700; font-size: 25px;">
+            we create custom solutions that grow brands online
+          </p>
+        </div>
+
+        <section>
+          <div class="slider-section custom-slide">
+            <div id="custom-infinite" class="custom-slider">
+              <div class="container-fluid custom-barrier">
+                <ul class="custom-lane">
+                  <!-- Repeat block twice for seamless loop -->
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/babiesrus.png.webp"><h4>Babies R Us</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/buddha.svg"><h4>Buddha</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/ibm.svg"><h4>IBM</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/jh-tackle-logo.png.webp"><h4>JH Tackle</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/Northwestern_Qatar_Logo_2_.svg"><h4>Northwestern</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/paul-stuart.png.webp"><h4>Paul Stuart</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/rollink.svg"><h4>Rollink</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/spar.svg"><h4>Spar</h4></div></li>
+        
+                  <!-- Duplicate -->
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/babiesrus.png.webp"><h4>Babies R Us</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/buddha.svg"><h4>Buddha</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/ibm.svg"><h4>IBM</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/jh-tackle-logo.png.webp"><h4>JH Tackle</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/Northwestern_Qatar_Logo_2_.svg"><h4>Northwestern</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/paul-stuart.png.webp"><h4>Paul Stuart</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/rollink.svg"><h4>Rollink</h4></div></li>
+                  <li class="custom-car"><div class="custom-inner"><img src="assets/center_slider_images/spar.svg"><h4>Spar</h4></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="rtl-slider-wrapper mt-4">
+          <div class="rtl-slider-section">
+            <div id="rtl-infinite" class="rtl-slider">
+              <div class="container-fluid rtl-barrier">
+                <ul class="rtl-lane">
+                  <!-- Original logos -->
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/babiesrus.png.webp"><h4>Babies R Us</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/buddha.svg"><h4>Buddha</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/ibm.svg"><h4>IBM</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/jh-tackle-logo.png.webp"><h4>JH Tackle</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/Northwestern_Qatar_Logo_2_.svg"><h4>Northwestern</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/paul-stuart.png.webp"><h4>Paul Stuart</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/rollink.svg"><h4>Rollink</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/spar.svg"><h4>Spar</h4></div></li>
+        
+                  <!-- Duplicate logos -->
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/babiesrus.png.webp"><h4>Babies R Us</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/buddha.svg"><h4>Buddha</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/ibm.svg"><h4>IBM</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/jh-tackle-logo.png.webp"><h4>JH Tackle</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/Northwestern_Qatar_Logo_2_.svg"><h4>Northwestern</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/paul-stuart.png.webp"><h4>Paul Stuart</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/rollink.svg"><h4>Rollink</h4></div></li>
+                  <li class="rtl-car"><div class="rtl-inner"><img src="assets/center_slider_images/spar.svg"><h4>Spar</h4></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mt-4">
+          <a class="c-btn22 -slideover" href="#">
+            Explore All Services <span> <i class="fas fa-angle-right" style="color: #3b7bce;"></i>
+            </span>
+        </a>
+      </div>
+        </section>
+        
+
+      </section>
+
+      
+      <section class="background_dark_color full-section">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Sticky Left Content -->
+            <div class="col-md-5 position-sticky start-0 sticky-left">
+              <div class="digital">
+                <h4>WHY DIGITAL SILK?</h4>
+                <h1>Discover Our Expertise as a Web Design Company</h1>
+                <p class="mt-md-5 mt-3">
+                  As a full-service web design agency, we handle all your digital needs under one roof. Our custom web design services include thorough research and planning, bespoke designs and digital strategies tailored to grow your reach, drive traffic and encourage engagement.
+                </p>
+                <div class="mt-md-5 mt-3">
+                  <img src="assets/center_slider_images/Explore-Our-Web-Design-Services-1.png.webp" class="img-fluid" alt="">
+                </div>
+              </div>
+            </div>
+      
+            <!-- Scrolling Right Cards -->
+            <div class="col-md-7">
+              <div class="scrolling-cards">
+                <!-- Repeat cards -->
+                <div class="widthset bg_color">
+                  <div class="icon-wrap">
+                    <img src="assets/center_slider_images/download.svg" alt="">
+                    <div class="hover-image">
+                      <img src="assets/center_slider_images/mob2-BJyy3J3O.webp" class="w-75" alt="hover graphic">
+                    </div>
+                  </div>
+                  <h2 class="py-4 fw-bold">Custom Web Design</h2>
+                  <p>
+                    Each website we create is meticulously crafted to deliver a 100% unique online experience tailored to your brand. Our expert designers transform your vision into a dynamic, custom design that enhances your brand’s visibility, boosts engagement, and drives conversions. With us, your website will not only stand out but also connect deeply with your audience. 
+
+                  </p>
+                </div>
+      
+                <div class="widthset bg_color">
+                  <div class="icon-wrap">
+                    <img src="assets/center_slider_images/Group-14014880.svg" alt="">
+                    <div class="hover-image">
+                      <img src="assets/center_slider_images/mob2-BJyy3J3O.webp" class="w-75" alt="hover graphic">
+                    </div>
+                  </div>
+                  <h2 class="py-4 fw-bold">Responsive Web Design
+                  </h2>
+                  <p>
+                    We deliver seamless user experiences across all devices. Our responsive designs adapt flawlessly to any screen size, ensuring that your website not only meets but exceeds user expectations. From planning to design and development, we ensure a consistent, engaging experience for every visitor, no matter how they access your site.
+
+                  </p>
+                </div>
+      
+                <div class="widthset bg_color">
+                  <div class="icon-wrap">
+                    <img src="assets/center_slider_images/Group-14014882.svg" alt="">
+                    <div class="hover-image">
+                      <img src="assets/center_slider_images/mob2-BJyy3J3O.webp" class="w-75" alt="hover graphic">
+                    </div>
+                  </div>
+                  <h2 class="py-4 fw-bold">Website Redesign
+                  </h2>
+                  <p>Whether you need a design refresh or a complete website overhaul, we analyze your site’s pain points and opportunities to revitalize your digital presence. Our award-winning web designers will breathe new life into your website, enhancing its functionality, user experience, and aesthetic appeal. The result? A modern, dynamic site that drives increased traffic and bolsters your industry reputation. 
+
+                  </p>
+                </div>
+                <div class="widthset bg_color">
+                  <div class="icon-wrap">
+                    <img src="assets/center_slider_images/download.svg" alt="">
+                    <div class="hover-image">
+                      <img src="assets/center_slider_images/mob2-BJyy3J3O.webp" class="w-75" alt="hover graphic">
+                    </div>
+                  </div>
+                  <h2 class="py-4 fw-bold">Custom Web Design</h2>
+                  <p>
+                    Each website we create is meticulously crafted to deliver a 100% unique online experience tailored to your brand. Our expert designers transform your vision into a dynamic, custom design that enhances your brand’s visibility, boosts engagement, and drives conversions. With us, your website will not only stand out but also connect deeply with your audience. 
+
+                  </p>
+                </div>
+      
+                <div class="widthset bg_color">
+                  <div class="icon-wrap">
+                    <img src="assets/center_slider_images/Group-14014880.svg" alt="">
+                    <div class="hover-image">
+                      <img src="assets/center_slider_images/mob2-BJyy3J3O.webp" class="w-75" alt="hover graphic">
+                    </div>
+                  </div>
+                  <h2 class="py-4 fw-bold">Responsive Web Design
+                  </h2>
+                  <p>
+                    We deliver seamless user experiences across all devices. Our responsive designs adapt flawlessly to any screen size, ensuring that your website not only meets but exceeds user expectations. From planning to design and development, we ensure a consistent, engaging experience for every visitor, no matter how they access your site.
+
+                  </p>
+                </div>
+      
+                <div class="widthset bg_color">
+                  <div class="icon-wrap">
+                    <img src="assets/center_slider_images/Group-14014882.svg" alt="">
+                    <div class="hover-image">
+                      <img src="assets/center_slider_images/mob2-BJyy3J3O.webp" class="w-75" alt="hover graphic">
+                    </div>
+                  </div>
+                  <h2 class="py-4 fw-bold">Website Redesign
+                  </h2>
+                  <p>Whether you need a design refresh or a complete website overhaul, we analyze your site’s pain points and opportunities to revitalize your digital presence. Our award-winning web designers will breathe new life into your website, enhancing its functionality, user experience, and aesthetic appeal. The result? A modern, dynamic site that drives increased traffic and bolsters your industry reputation. 
+
+                  </p>
+                </div>
+      
+                <!-- Add more cards as needed -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section style="background-color: #dbf1ff;">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4 p-0">
+              <div class="image-card-wrapper">
+                <div class="custom-image-container">
+                  <img id="mainImage" src="assets/center_slider_images/case1-BVob2GIL.jpg" class="custom-image" alt="">
+                </div>
+            
+                <div class="text-on-image">
+                  <h1>Case</h1>
+                  <h1 style="margin-right: -10px;">
+                    Studie<span class="gradient-letter">s</span>
+                  </h1>
+                  <div class="svg-icons">
+                    <div class="icon-wrapper active">
+                      <img src="assets/svg/hp-logo.svg" class="svg-icon " data-index="0" />
+                    </div>
+                    <div class="icon-wrapper">
+                      <img src="assets/svg/xerox-logo.svg" class="svg-icon" data-index="1" />
+                    </div>
+                    <div class="icon-wrapper">
+                      <img src="assets/svg/doForms-logo-blue.svg" class="svg-icon" data-index="2" />
+                    </div>
+                    <div class="icon-wrapper">
+                      <img src="assets/svg/FieldEdge-logo-blue.svg" class="svg-icon" data-index="3" />
+                    </div>
+                    <div class="icon-wrapper">
+                      <img src="assets/svg/MCDS-logo-blue.svg" class="svg-icon" data-index="4" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-8 p-5 ">
+              <div id="contentContainer">
+            
+                <div class="content-block text-end text-black" data-index="0">
+                  <h3>
+                    From Concept To Market:
+                  </h3>
+                  <h3>
+                    We Engineer Projects 
+                    <span style="color: #0ad7f2;"> 
+                      For Superior Performance 
+                    </span>
+
+                  </h3>
+                  <div class="position-relative text-center">
+                    <!-- Background Image -->
+                    <img src="assets/svg/bo-logo-dark.svg" style="height: 150px; opacity: 0.1; width: 150px;" alt="" class="img-fluid">
+                  
+                    <!-- Overlay Content Centered on Image -->
+                    <div class="overlay-center-content d-flex justify-content-between gap-5 align-items-center">
+                      <img src="assets/svg/bo-logo-dark.svg" class="img-fluid"  alt="">
+                  
+                      <div class="widthadd"></div>
+                  
+                      <div class="text-black text-start">
+                        <h5>HP needed to implement a global rewards program.</h5>
+                        <h5><b class="text-black">In 6 months</b>, we achieved:</h5>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row text-center py-5">
+                    <div class="col-md-6">
+                      <div class="fourKet">
+                        <h1>
+                          40<span>K</span>
+                        </h1>
+                        <h4>
+                          active members
+                        </h4>
+                        <h4>
+                         
+                          inside the program
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="fourKet">
+                        <h1>
+                          56<span>%</span>
+                        </h1>
+                        <h4>
+                          of customers are
+  
+  
+                        </h4>
+                        <h4>
+                         
+                          repeat customers
+  
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                <div class="d-flex justify-content-start mt-4">
+                  <a class="c-btn22 -slideover" href="#">
+                    Read hp case study <span> <i class="fas fa-angle-right" style="color: #3b7bce;"></i>
+                    </span>
+                </a>
+              </div>
+                <div class="d-flex justify-content-start mt-4">
+                  <a class="c-btn22 -slideover" href="#">
+                    Start your project
+                    <span> <i class="fas fa-angle-right" style="color: #3b7bce;"></i>
+                    </span>
+                </a>
+              </div>
+                </div>
+
+                
+                <div class="content-block text-end text-black" data-index="1" style="display:none;">
+                  <h3>
+                    From Concept To Market:
+                  </h3>
+                  <h3>
+                    We Engineer Projects 
+                    <span style="color: #0ad7f2;"> 
+                      For Superior Performance 
+                    </span>
+
+                  </h3>
+                  <div class="position-relative text-center">
+                    <!-- Background Image -->
+                    <img src="assets/svg/xerox-logo-dark.svg" style="height: 150px; opacity: 0.1; width: 150px;" alt="" class="img-fluid">
+                  
+                    <!-- Overlay Content Centered on Image -->
+                    <div class="overlay-center-content d-flex justify-content-between gap-5 align-items-center">
+                      <img src="assets/svg/xerox-logo-dark.svg" style="height: 100px; width: 100px;" class="img-fluid"  alt="">
+                  
+                      <div class="widthadd"></div>
+                  
+                      <div class="text-black text-start">
+                        <h5>
+                          Xerox streamlined its B2B operations across regions
+                        </h5>
+                        <h5><b class="text-black">In 6 months,</b> we achieved: </h5>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row text-center py-5">
+                    <div class="col-md-6">
+                      <div class="fourKet ">
+                        <h1>
+                          25<span>K</span>
+                        </h1>
+                        <h4 class="text-start">
+                          documents processed
+                        </h4>
+                        <h4 class="text-start">
+                         
+                          per day                        </h4>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="fourKet">
+                        <h1>
+                          70<span>%</span>
+                        </h1>
+                        <h4>
+                          increase in
+
+  
+                        </h4>
+                        <h4>
+                         
+                          productivity  
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                <div class="d-flex justify-content-start mt-4">
+                  <a class="c-btn22 -slideover" href="#">
+                    Read hp case study <span> <i class="fas fa-angle-right" style="color: #3b7bce;"></i>
+                    </span>
+                </a>
+              </div>
+                <div class="d-flex justify-content-start mt-4">
+                  <a class="c-btn22 -slideover" href="#">
+                    Start your project
+                    <span> <i class="fas fa-angle-right" style="color: #3b7bce;"></i>
+                    </span>
+                </a>
+              </div>
+                </div>
+
+
+
+                <div class="content-block text-end text-black" data-index="2" style="display:none;">
+                  <h3>
+                    From Concept To Market:
+                  </h3>
+                  <h3>
+                    We Engineer Projects 
+                    <span style="color: #0ad7f2;"> 
+                      For Superior Performance 
+                    </span>
+
+                  </h3>
+                  <div class="position-relative text-center">
+                    <!-- Background Image -->
+                    <img src="assets/center_slider_images/doForms-logo-blue.svg" style="height: 150px; opacity: 0.1; width: 150px;" alt="" class="img-fluid">
+                  
+                    <!-- Overlay Content Centered on Image -->
+                    <div class="overlay-center-content d-flex justify-content-between gap-5 align-items-center">
+                      <img src="assets/center_slider_images/doForms-logo-blue.svg" style="height: 100px; width: 100px;" class="img-fluid"  alt="">
+                  
+                      <div class="widthadd"></div>
+                  
+                      <div class="text-black text-start">
+                        <h5>
+                          doForms built custom mobile solutions.
+
+                        </h5>
+                        <h5><b class="text-black">In 6 months,</b> we achieved: </h5>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row text-center py-5">
+                    <div class="col-md-6">
+                      <div class="fourKet ">
+                        <h1>
+                          12<span>K</span>
+                        </h1>
+                        <h4 class="text-">
+                          mobile users
+
+
+                        </h4>
+                        <h4 class="text-">
+                          on platform
+                       </h4>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="fourKet">
+                        <h1>
+                          88<span>%</span>
+                        </h1>
+                        <h4>
+                          user satisfaction
+  
+                        </h4>
+                        <h4>
+                          increased
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                <div class="d-flex justify-content-start mt-4">
+                  <a class="c-btn22 -slideover" href="#">
+                    Read hp case study <span> <i class="fas fa-angle-right" style="color: #3b7bce;"></i>
+                    </span>
+                </a>
+              </div>
+                <div class="d-flex justify-content-start mt-4">
+                  <a class="c-btn22 -slideover" href="#">
+                    Start your project
+                    <span> <i class="fas fa-angle-right" style="color: #3b7bce;"></i>
+                    </span>
+                </a>
+              </div>
+                </div>
+
+
+
+                <div class="content-block text-end text-black" data-index="3" style="display:none;">
+                  <h3>
+                    From Concept To Market:
+                  </h3>
+                  <h3>
+                    We Engineer Projects 
+                    <span style="color: #0ad7f2;"> 
+                      For Superior Performance 
+                    </span>
+
+                  </h3>
+                  <div class="position-relative text-center">
+                    <!-- Background Image -->
+                    <img src="assets/center_slider_images/FieldEdge-logo-blue.svg" style="height: 150px; opacity: 0.1; width: 150px;" alt="" class="img-fluid">
+                  
+                    <!-- Overlay Content Centered on Image -->
+                    <div class="overlay-center-content d-flex justify-content-between gap-5 align-items-center">
+                      <img src="assets/center_slider_images/FieldEdge-logo-blue.svg" style="height: 100px; width: 100px;" class="img-fluid"  alt="">
+                  
+                      <div class="widthadd"></div>
+                  
+                      <div class="text-black text-start">
+                        <h5>
+                          doForms built custom mobile solutions.
+
+                        </h5>
+                        <h5><b class="text-black">In 6 months,</b> we achieved: </h5>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row text-center py-5">
+                    <div class="col-md-6">
+                      <div class="fourKet ">
+                        <h1>
+                          30<span>K</span>
+                        </h1>
+                        <h4 class="text-">
+                          increase in
+
+                        </h4>
+                        <h4 class="text-">
+                         
+job completion rate
+                       </h4>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="fourKet">
+                        <h1>
+                          90<span>%</span>
+                        </h1>
+                        <h4>
+                          technician adoption
+                        </h4>
+                        <h4>
+                          within 3 months
+
+
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                <div class="d-flex justify-content-start mt-4">
+                  <a class="c-btn22 -slideover" href="#">
+                    Read hp case study <span> <i class="fas fa-angle-right" style="color: #3b7bce;"></i>
+                    </span>
+                </a>
+              </div>
+                <div class="d-flex justify-content-start mt-4">
+                  <a class="c-btn22 -slideover" href="#">
+                    Start your project
+                    <span> <i class="fas fa-angle-right" style="color: #3b7bce;"></i>
+                    </span>
+                </a>
+              </div>
+                </div>
+                <div class="content-block text-end text-black" data-index="4" style="display:none;">
+                  <h3>
+                    From Concept To Market:
+                  </h3>
+                  <h3>
+                    We Engineer Projects 
+                    <span style="color: #0ad7f2;"> 
+                      For Superior Performance 
+                    </span>
+
+                  </h3>
+                  <div class="position-relative text-center">
+                    <!-- Background Image -->
+                    <img src="assets/center_slider_images/FieldEdge-logo-blue.svg" style="height: 150px; opacity: 0.1; width: 150px;" alt="" class="img-fluid">
+                  
+                    <!-- Overlay Content Centered on Image -->
+                    <div class="overlay-center-content d-flex justify-content-between gap-5 align-items-center">
+                      <img src="assets/center_slider_images/FieldEdge-logo-blue.svg" style="height: 100px; width: 100px;" class="img-fluid"  alt="">
+                  
+                      <div class="widthadd"></div>
+                  
+                      <div class="text-black text-start">
+                        <h5>
+                          doForms built custom mobile solutions.
+
+                        </h5>
+                        <h5><b class="text-black">In 6 months,</b> we achieved: </h5>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row text-center py-5">
+                    <div class="col-md-6">
+                      <div class="fourKet ">
+                        <h1>
+                          30<span>K</span>
+                        </h1>
+                        <h4 class="text-">
+                          increase in
+
+                        </h4>
+                        <h4 class="text-">
+                         
+job completion rate
+                       </h4>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="fourKet">
+                        <h1>
+                          90<span>%</span>
+                        </h1>
+                        <h4>
+                          technician adoption
+                        </h4>
+                        <h4>
+                          within 3 months
+
+
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                <div class="d-flex justify-content-start mt-4">
+                  <a class="c-btn22 -slideover" href="#">
+                    Read hp case study <span> <i class="fas fa-angle-right" style="color: #3b7bce;"></i>
+                    </span>
+                </a>
+              </div>
+                <div class="d-flex justify-content-start mt-4">
+                  <a class="c-btn22 -slideover" href="#">
+                    Start your project
+                    <span> <i class="fas fa-angle-right" style="color: #3b7bce;"></i>
+                    </span>
+                </a>
+              </div>
+                </div>
+            
+              </div>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <script>
+        const imageList = [
+          'case1-BVob2GIL.jpg',
+          'xerox-bg-tall.jpg',
+          'Web-design-case-study-Doforms.jpg',
+          'fieldedge-main.jpg',
+          'Web-design-case-study-mcds.jpg'
+        ];
+      
+        const icons = document.querySelectorAll('.icon-wrapper');
+        const imageElement = document.getElementById('mainImage');
+        const contentBlocks = document.querySelectorAll('.content-block');
+      
+        icons.forEach((icon, index) => {
+          icon.addEventListener('click', () => {
+            // Activate icon
+            icons.forEach(i => i.classList.remove('active'));
+            icon.classList.add('active');
+      
+            // Change image
+            imageElement.src = 'assets/center_slider_images/' + imageList[index];
+      
+            // Show relevant content
+            contentBlocks.forEach(block => {
+              block.style.display = block.dataset.index == index ? 'block' : 'none';
+            });
+          });
+        });
+      </script>
+      
+        <script>
+          function switchTab(element, category) {
+// Remove active class from all filter cards
+document.querySelectorAll('.filter-card').forEach(card => {
+card.classList.remove('active');
+});
+
+// Add active class to clicked filter card
+element.classList.add('active');
+
+// Show or hide project items based on selected category
+document.querySelectorAll('.project-item').forEach(item => {
+if (item.dataset.category === category) {
+item.classList.remove('d-none'); // Show items that match the category
+} else {
+item.classList.add('d-none'); // Hide other items
+}
+});
+}
+        </script>
+      
+      <script>
+        const textTrigger = document.getElementById('video-trigger');
+      
+        textTrigger.addEventListener('click', () => {
+          openVideo();
+        });
+      </script>
+      
+      <script>
+        function openVideo() {
+          const modal = document.getElementById('videoModal');
+          const video = document.getElementById('fullscreenVideo');
+          modal.style.display = 'block';
+          video.play();
+        }
+      
+        function closeVideo() {
+          const modal = document.getElementById('videoModal');
+          const video = document.getElementById('fullscreenVideo');
+          modal.style.display = 'none';
+          video.pause();
+          video.currentTime = 0;
+        }
+      </script>
+      
+        
+        <script>
+          $(".custom-slider-toggle").click(function () {
+            $(".custom-slider-track").toggleClass("custom-slider-paused");
+          });
+        </script>
+      
+  
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script>
+      const toggleBtn = document.getElementById('customToggle');
+      const navOverlay = document.getElementById('navbarNav');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+    
+      toggleBtn.addEventListener('click', () => {
+        const isOpen = navOverlay.classList.toggle('show');
+    
+        // Toggle icons
+        if (isOpen) {
+          menuIcon.style.display = 'none';
+          closeIcon.style.display = 'inline';
+        } else {
+          menuIcon.style.display = 'inline';
+          closeIcon.style.display = 'none';
+        }
+      });
+    
+      // Close nav when link is clicked
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          navOverlay.classList.remove('show');
+          menuIcon.style.display = 'inline';
+          closeIcon.style.display = 'none';
+        });
+      });
+    
+      // Navbar background change on scroll
+      window.addEventListener('scroll', function () {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    </script>
+    
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
